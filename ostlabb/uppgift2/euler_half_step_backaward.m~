@@ -1,0 +1,5 @@
+function v_old=euler_half_step_backaward(x_old,v_new,step_size,NS,KS,KD,L)
+
+f_old=my_force(x_old,v_old,NS,NP,KS,KD,L,M);   % Initial force calculation 
+v_old=v_new-f_old*step_size/2;                 % half backwards Euler step to get V_{-1/2}
+end
